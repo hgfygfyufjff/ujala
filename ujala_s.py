@@ -98,7 +98,8 @@ def check_force_join(user_id: int) -> bool:
                 return False
         except Exception as e:
             logger.error(f"Force join error on {channel}: {e}")
-            pass 
+            # YAHAN FIX KIYA GAYA HAI: Ab error aane par sidha block hoga
+            return False 
     return True
 
 # ═══════════════════════════════════════════════════════════════
@@ -397,7 +398,7 @@ def handle_check_join(call):
         welcome_msg = (
             "🌟 <b>Welcome to Ujala Happiest Onam Loot Bot!</b> 🌟\n\n"
             "🔥 <b>FREE ₹50 CASHBACK Per Mobile Number</b> 🔥\n\n"
-            "<b>Steps to Earn:</b>\n"
+            "Steps to Earn:\n"
             "1️⃣ Click on 🛍 Premium Voucher.\n"
             "2️⃣ Bot details automatic handle karega (City: Kerala, Barcode: 8902102126232).\n"
             "3️⃣ Enter OTP & Spin the wheel!\n"
@@ -426,7 +427,7 @@ def send_welcome(message):
     welcome_msg = (
         "🌟 <b>Welcome to Ujala Happiest Onam Loot Bot!</b> 🌟\n\n"
         "🔥 <b>FREE ₹50 CASHBACK Per Mobile Number</b> 🔥\n\n"
-        "<b>Steps to Earn:</b>\n"
+        "Steps to Earn:\n"
         "1️⃣ Click on 🛍 Premium Voucher.\n"
         "2️⃣ Bot details automatic handle karega (City: Kerala, Barcode: 8902102126232).\n"
         "3️⃣ Enter OTP & Spin the wheel!\n"
